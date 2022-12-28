@@ -1,17 +1,97 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title></title>
+    <style>
+        #initLoad {
+            display: flex;
+            position: absolute;
+            background: #fff;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .initLoading{
+            margin-bottom: 40px;
+        }
+        .initLoading span{
+            display: inline-block;
+            width: 8px;
+            height: 100%;
+            border-radius: 4px;
+            background: #6985e6;
+            animation: load 1s ease infinite;
+        }
+        @keyframes load{
+            0%,100%{
+                height: 40px;
+                background: #89a3ff;
+            }
+            50%{
+                height: 70px;
+                margin: -15px 0;
+                background: lightblue;
+            }
+        }
+        .initLoading span:nth-child(2){
+           animation-delay:0.2s;
+        }
+        .initLoading span:nth-child(3){
+           animation-delay:0.4s;
+        }
+        .initLoading span:nth-child(4){
+           animation-delay:0.6s;
+        }
+        .initLoading span:nth-child(5){
+           animation-delay:0.8s;
+        }
+        .loadText{
+            color: #89a3ff;
+            font-size: 16px;
+            font-weight: bold;
+            font-style:oblique
+        }
+    </style>
+    <script>
+        // window.onerror = function(message) { 
+        //     alert(message)
+        // }
+        let initLoading = "<div id='initLoad'><div class='initLoading'><span></span><span></span><span></span><span></span></div><div class='loadText'>Loading...</div></div>";
+        document.write(initLoading);
+        document.onreadystatechange = function () {
+            if  (document.readyState === "complete") {
+                let initLoad = document.getElementById("initLoad");
+                if (initLoad) {
+                    document.body.removeChild(initLoad)
+                }
+            } else {
+                console.log(document.readyState)
+            }
+        }
+        // window.onload=function() {
+        //     if (!navigator.cookieEnabled) {
+        //         alert("您的浏览器限制了第三方cook，这将影响网站正常使用，请解除后重试")
+        //     }
+        // }
+    </script>
+</head>
+
+<body>
+<noscript>
+    <strong>
+        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
+        work properly without JavaScript enabled. Please enable it to
+        continue.
+    </strong>
+</noscript>
+<div id="app"></div>
+</body>
 </html>
