@@ -28,12 +28,12 @@ export default {
         {
           label: "首页",
           value: "Home",
-          icon: "game",
+          icon: "home",
         },
         {
           label: "直播",
           value: "Live",
-          icon: "game",
+          icon: "live",
         },
         {
           label: "游戏",
@@ -43,7 +43,7 @@ export default {
         {
           label: "我的",
           value: "Mine",
-          icon: "game",
+          icon: "mine",
         },
       ],
       active: "Home",
@@ -167,6 +167,9 @@ export default {
       animation-direction: alternate;
       animation-timing-function: ease-in-out;
       color: #f00;
+      .svg-icon {
+        fill: #f00;
+      }
       &::after {
         width: 70px;
         height: 70px;
