@@ -17,10 +17,12 @@
 <script lang="ts">
 import { reactive } from "vue";
 import { ITabList } from "@/common/interfaces";
+import { useRouter } from "vue-router";
 
 export default {
   name: "MobileTabBar",
   setup() {
+    const router = useRouter();
     const data = reactive({
       tabList: [
         {
@@ -49,8 +51,10 @@ export default {
 
     const methods = {
       handleClickTab(item: ITabList) {
-        console.warn(item, "item");
         data.active = item.value;
+        router.push({
+          name: item.value,
+        });
       },
     };
 

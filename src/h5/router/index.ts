@@ -13,15 +13,27 @@ const routes: Array<RouteRecordRaw> = [
       // isTab: true, // 是否需要tab栏， 默认 true
     },
   },
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  // },
+  {
+    path: "/m/live",
+    name: "Live",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "live" */ "../views/live/index.vue"),
+  },
+  {
+    path: "/m/game",
+    name: "Game",
+    component: () =>
+      import(/* webpackChunkName: "game" */ "../views/game/index.vue"),
+  },
+  {
+    path: "/m/mine",
+    name: "Mine",
+    component: () =>
+      import(/* webpackChunkName: "mine" */ "../views/mine/index.vue"),
+  },
 ];
 
 const router = createRouter({
