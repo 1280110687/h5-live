@@ -29,12 +29,13 @@
     ]
   },
   "include": [
+    "src/**/*.js",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/components/svg-icon/index.js", "src/components/svg-icon/index.js"  ],
   "exclude": [
     "node_modules"
   ]

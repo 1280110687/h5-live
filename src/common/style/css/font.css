@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2012120 */
+  src: url('//at.alicdn.com/t/font_2012120_essm0564k1t.eot');
+  src: url('//at.alicdn.com/t/font_2012120_essm0564k1t.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2012120_essm0564k1t.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2012120_essm0564k1t.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2012120_essm0564k1t.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2012120_essm0564k1t.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: DSDigital;
+  src: url('../fonts/DS-Digital.eot');
+  src: url('../fonts/DS-Digital.woff2') format("woff2"),url('../fonts/DS-Digital.woff') format("woff"),url('../fonts/DS-Digital.ttf') format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: DINAlternate;
+  src: url('../fonts/DINAlternate-Bold.woff2') format("woff2"),url('../fonts/DINAlternate-Bold.woff') format("woff"),url('../fonts/DINAlternate-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}

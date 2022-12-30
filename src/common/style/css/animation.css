@@ -1,0 +1,54 @@
+@keyframes my-move-pk10 {
+  0% {left: 0}
+  100%{left: -1668px}
+}
+@keyframes my-move-car {
+  0% {right: 4px}
+  100%{right: 780px}
+}
+@keyframes my-move-awards {
+  0% {opacity: 0}
+  100%{opacity: 1}
+  0% {top: 170px}
+  100%{top: 180px}
+}
+@keyframes my-move-awards-stop-one {
+  0% {right: 4px}
+  100%{right: 780px}
+}
+@keyframes my-move-awards-stop-two {
+  0% {right: 4px}
+  100%{right: 720px}
+}
+@keyframes my-move-awards-stop-three {
+  0% {right: 4px}
+  100%{right: 660px}
+}
+@keyframes my-move-awards-stop-four {
+  0% {right: 4px}
+  100%{right: 600px}
+}
+@keyframes my-move-awards-stop-five {
+  0% {right: 4px}
+  100%{right: 540px}
+}
+@keyframes my-move-awards-stop-six {
+  0% {right: 4px}
+  100%{right: 480px}
+}
+@keyframes my-move-awards-stop-seven {
+  0% {right: 4px}
+  100%{right: 420px}
+}
+@keyframes my-move-awards-stop-eight {
+  0% {right: 4px}
+  100%{right: 360px}
+}
+@keyframes my-move-awards-stop-nine {
+  0% {right: 4px}
+  100%{right: 300px}
+}
+@keyframes my-move-awards-stop-ten {
+  0% {right: 4px}
+  100%{right: 240px}
+}

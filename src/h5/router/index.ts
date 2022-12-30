@@ -1,12 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import store from "@/store";
-import HomeView from "../views/HomeView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/m",
     name: "Home",
-    component: HomeView,
+    component: () =>
+      import(/* webpackChunkName: "home" */ "../views/home/index.vue"),
+    meta: {
+      title: "首页",
+      // isHeader: true, // 是否需要nav头部， 默认 true
+      // isTab: true, // 是否需要tab栏， 默认 true
+    },
   },
   // {
   //   path: "/about",
