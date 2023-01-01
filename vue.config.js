@@ -25,5 +25,10 @@ module.exports = defineConfig({
       .options({
         symbolId: "icon-[name]",
       });
+    config.module
+      .rule("less")
+      .oneOf("vant")
+      .before("vue-modules")
+      .test(/[\\/]node_modules[\\/]vant[\\/]/);
   },
 });

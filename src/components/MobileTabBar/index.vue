@@ -15,14 +15,15 @@
   </div>
 </template>
 <script lang="ts">
-import { reactive } from "vue";
+import { reactive, watch } from "vue";
 import { ITabList } from "@/common/interfaces";
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 export default {
   name: "MobileTabBar",
   setup() {
     const router = useRouter();
+    const route = useRoute();
     const data = reactive({
       tabList: [
         {
@@ -48,6 +49,13 @@ export default {
       ],
       active: "Home",
     });
+
+    watch(
+      () => route.name,
+      (value) => {
+        data.active = String(value);
+      }
+    );
 
     const methods = {
       handleClickTab(item: ITabList) {
@@ -150,10 +158,10 @@ export default {
   width: 100%;
   height: 46px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background: #fff;
-  border-top: 1px solid #efefef;
+  background: --primary-background-color;
+  border-top: 1px solid var(--primary-border);
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
   &_item {
@@ -161,21 +169,24 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
     &.active {
       position: relative;
       animation: scaleMove 0.5s;
       animation-direction: alternate;
       animation-timing-function: ease-in-out;
-      color: #f00;
+      color: var(--primary-color);
       .svg-icon {
-        fill: #f00;
+        width: 16px;
+        height: 16px;
+        fill: var(--primary-color);
       }
       &::after {
         width: 70px;
         height: 70px;
         content: "";
         display: inline-block;
-        background: #f00;
+        background: var(--primary-color);
         opacity: 0;
         border-radius: 100px;
         position: absolute;
