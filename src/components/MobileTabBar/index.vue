@@ -18,6 +18,7 @@
 import { reactive, watch } from "vue";
 import { ITabList } from "@/common/interfaces";
 import { useRoute, useRouter } from "vue-router";
+import { showToast } from "vant";
 
 export default {
   name: "MobileTabBar",
@@ -63,6 +64,7 @@ export default {
         router.push({
           name: item.value,
         });
+        showToast("aaaaaaaaaaaa");
       },
     };
 

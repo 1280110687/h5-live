@@ -34,18 +34,20 @@ interface IThemeOptions {
 const baseSize: IThemeKey = {
   "--font-size-large-x": "22px",
   "--font-size-large": "18px",
-  "--font-size-medium": "14px",
   "--font-size-medium-x": "16px",
-  "--font-size-small-s": "10px",
-  "--font-size-small": "12px",
+  "--font-size-medium": "14px",
+  "--font-size-small-x": "12px",
+  "--font-size-small": "10px",
 };
 
 export const themeOptions: IThemeOptions = {
   // 深色
   dark: {
     ...baseSize,
-    "--color1": "#fff",
-    "--bg1": "#222",
+    "--primary-color": "#4176fa",
+    "--primary-color-hover": "#3d72fa",
+    "--primary-background-color": "#f0f6ff",
+    "--primary-border": "#dce1e5",
   },
   // 浅色
   light: {
@@ -54,8 +56,6 @@ export const themeOptions: IThemeOptions = {
     "--primary-color-hover": "#3d72fa",
     "--primary-background-color": "#f0f6ff",
     "--primary-border": "#dce1e5",
-    "--color1": "#ff758c",
-    "--bg1": "#667eea",
   },
 };
 /**
