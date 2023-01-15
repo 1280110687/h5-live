@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div id="app">
     <router-view v-slot="{ Component }">
       <keep-alive :include="cacheKeepAlive">
         <transition :name="animation">
@@ -25,7 +25,6 @@ export default {
     const store = useStore();
     const route = useRoute();
     const animation = ref("slide");
-    console.warn(route, !!route.meta.tab, "route");
     const cacheKeepAlive = computed(() => store.state.HomeStore.cacheKeepAlive);
 
     watch(route, () => {
@@ -52,18 +51,22 @@ export default {
   height: 100%;
   overflow: hidden;
 }
+
 .slide-right-enter-active {
   opacity: 0;
   transform: translate3d(-100%, 0, 0);
 }
+
 .slide-right-leave-active {
   opacity: 0;
   transform: translate3d(100%, 0, 0);
 }
+
 .slide-left-enter-active {
   opacity: 0;
   transform: translate3d(100%, 0, 0);
 }
+
 .slide-left-leave-active {
   opacity: 0;
   transform: translate3d(-100%, 0, 0);

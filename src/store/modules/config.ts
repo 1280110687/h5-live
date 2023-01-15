@@ -1,3 +1,5 @@
+import { initTheme, themeOptions } from "@/theme";
+
 const initState = () => ({});
 
 // states
