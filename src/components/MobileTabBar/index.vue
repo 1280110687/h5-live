@@ -64,7 +64,7 @@ export default {
         router.push({
           name: item.value,
         });
-        showToast("aaaaaaaaaaaa");
+        // showToast("aaaaaaaaaaaa");
       },
     };
 
