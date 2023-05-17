@@ -1,0 +1,9 @@
+dist
+lib
+es
+umd
+node_modules
+geetest.captcha.ts
+geet.js
+Handicap
+.eslintcache

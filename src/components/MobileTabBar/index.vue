@@ -8,9 +8,9 @@
       @click="handleClickTab(item)"
     >
       <svg-icon :icon-class="item.icon" />
-      <span :class="{ active: data.active == item.value }">{{
-        item.label
-      }}</span>
+      <span :class="{ active: data.active == item.value }">
+        {{ item.label }}
+      </span>
     </div>
   </div>
 </template>

@@ -13,20 +13,11 @@
     "useDefineForClassFields": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
+    "types": ["webpack-env"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "src/**/*.js",
@@ -34,9 +25,9 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-, "src/components/svg-icon/index.js", "src/components/svg-icon/index.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "tests/**/*.tsx",
+    "src/components/svg-icon/index.js",
+    "src/components/svg-icon/index.js"
+  ],
+  "exclude": ["node_modules"]
 }
